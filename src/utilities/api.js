@@ -81,8 +81,6 @@ export default class Api {
     axiosInstance.defaults.headers = { ...axiosHeaders, ...headers };
   }
   static getLoginCredentials(path, data) {
-
-    
     return axiosInstance.post(path, data).then(res => {
       const token = res.data.data.access_token;
       sessionStorage.setItem("token", token);
@@ -97,26 +95,9 @@ export default class Api {
   }
 
   static getOTPStatus(path, data) {
-    // return axiosInstance.post(path, data).then(res => {
-    //   return res.data;
-    // });
-    var requestOptions = {
-      method: "POST",
-      body: data,
-      redirect: "follow"
-    };
-
-    return fetch(path, requestOptions)
-      .then(response => response.text())
-      .then(result => {
-        const res = JSON.parse(result);
-        res["data"] = {};
-        res["data"]["otp"] = "999999";
-        // res.data.push({ otp: "999999" });
-        console.debug("login res", res);
-        return res.data;
-      })
-      .catch(error => console.log("error", error));
+    return axiosInstance.post(path, data).then(res => {
+      return res.data;
+    });
   }
 
   static otpData(data) {

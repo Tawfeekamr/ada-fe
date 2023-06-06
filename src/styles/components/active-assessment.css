@@ -1,0 +1,23 @@
+.active-assessment {
+  &__form {
+    max-width: 55%;
+    margin: 0 auto;
+
+   .button-wrapper {
+      text-align: center;
+      margin-block: 15px;
+    }
+  }
+  &__title {
+    font-size: 30px;
+    text-align: center;
+    margin: 60px auto 47px;
+  }
+}
+.previous-assessments {
+  margin-top: 40px;
+  &__title {
+    font-size: 22px;
+    color: var(--dark-gray);
+  }
+}

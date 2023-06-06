@@ -1,0 +1,21 @@
+import Api from '../utilities/api';
+
+export const GET_CAMPAIGN_ACTIVE = {
+  ROOT: 'GET_CAMPAIGN_ACTIVE',
+  PENDING: 'GET_CAMPAIGN_ACTIVE_PENDING',
+  REJECTED: 'GET_CAMPAIGN_ACTIVE_REJECTED',
+  FULFILLED: 'GET_CAMPAIGN_ACTIVE_FULFILLED',
+};
+export const GET_CAMPAIGN_INACTIVE = {
+  ROOT: 'GET_CAMPAIGN_INACTIVE',
+  PENDING: 'GET_CAMPAIGN_INACTIVE_PENDING',
+  REJECTED: 'GET_CAMPAIGN_INACTIVE_REJECTED',
+  FULFILLED: 'GET_CAMPAIGN_INACTIVE_FULFILLED',
+};
+
+export function getCampaignsWithStatus(status, qs) {
+  return {
+    type: status ? GET_CAMPAIGN_ACTIVE.ROOT : GET_CAMPAIGN_INACTIVE.ROOT,
+    payload: Api.getCampaignWithStatus(status, qs),
+  };
+}

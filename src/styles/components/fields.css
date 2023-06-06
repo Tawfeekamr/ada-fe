@@ -1,0 +1,194 @@
+.form-item {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  input[type=text] ,input[type=email], input[type=number] {
+    border: 1px solid var(--border);
+    height: 45px;
+    width: 100%;
+    line-height: 45px;
+    padding-inline: 18px;
+    font-weight: 200;
+    font-family: 'ElektraLight';
+    &:dir(rtl) {
+      font-family: 'FrutigerArabic';
+    }
+    &:placeholder {
+      font-weight: 200;
+    }
+    &.english {
+      direction: ltr;
+      &:placeholder-shown {
+        &:dir(rtl) {
+          direction: rtl;
+
+        }
+      }
+    }
+    &.rtl {
+      direction: rtl;
+      &:placeholder-shown {
+        &:dir(ltr) {
+          direction: ltr;
+        }
+      }
+    }
+  }
+  input[type=text]::placeholder ,input[type=email]::placeholder, input[type=number]::placeholder {
+    color: var(--light-gray);
+    font-weight: 200;
+    font-family: inherit;
+  }
+  textarea {
+    border: 1px solid var(--border);
+    height: 110px;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    font-family: inherit;
+    font-weight: 300;
+    &.english {
+      direction: ltr;
+      &:placeholder-shown {
+        &:dir(rtl) {
+          direction: rtl;
+        }
+      }
+    }
+    &.rtl {
+      direction: rtl;
+      &:placeholder-shown {
+        &:dir(ltr) {
+          direction: ltr;
+        }
+      }
+    }
+  }
+  textarea::placeholder {
+    color: var(--light-gray);
+    /* font-family: 'Frutiger'; */
+    font-weight: 200;
+    padding-inline: 5px;
+  }
+  .Select-control {
+    border-radius: 0;
+    height: 45px;
+    border: 1px solid var(--border);
+  }
+  .Select-placeholder {
+    color: var(--primary-color);
+    padding-inline-end: 18px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 45px;
+    font-weight: 200;
+  }
+  .Select-placeholder, .Select--single > .Select-control .Select-value {
+    line-height: 45px;
+    font-size: 14px;
+  }
+  .Select--multi .Select-value {
+    background-color: rgb(0,178,136) !important;
+    color: #fff;
+    margin: 5px;
+  }
+  .Select--multi .Select-value-icon:hover {
+    color: #fff;
+  }
+  .Select-clear {
+    display: none;
+  }
+  .Select-arrow {
+    border: none;
+    content: '';
+    background-image: url('/assets/images/dropdown.png');
+    width: 24px;
+    display: block;
+    height: 24px;
+    background-position: center;
+    background-size: contain;
+  }
+  .loading-select .Select-arrow {
+    background-image: url(/assets/images/loading-button.gif);
+  }
+  .Select-value {
+    line-height: 45px;
+  }
+  .Select-control > *:last-child {
+    padding-inline: 5px;
+  }
+
+  .Select.has-value.is-clearable.Select--single > .Select-control .Select-value {
+    &:dir(rtl) {
+      padding-right: 18px;
+    }
+  }
+  .react-datepicker, .react-datepicker-wrapper {
+    width: 100%;
+  }
+  .react-datepicker__input-container {
+    width: 100%;
+    position: relative;
+    input[type="text"] {
+      padding-inline-end: 38px;
+    }
+    &:after {
+      content: '';
+      background-image: url('/assets/images/dropdown.png');
+      width: 24px;
+      display: block;
+      height: 24px;
+      background-position: center;
+      background-size: contain;
+      position: absolute;
+      inset-inline-end: 10px;
+      top: 10px;
+      pointer-events: none;
+    }
+  }
+  .react-datepicker__day--keyboard-selected {
+    background-color: var(--primary-color);
+  }
+  .react-datepicker__day--keyboard-selected:hover {
+    background-color: var(--primary-color);
+  }
+  .react-datepicker__day--selected {
+    background-color: var(--primary-color);
+  }
+}
+#notes:empty {
+  background-image:  url('/assets/images/edit.png');
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 20px 15px;
+  height: 110px;
+  width: 100%;
+  resize: none;
+  padding-inline: 35px;
+  padding-top: 15px;
+  &:dir(rtl) {
+    background-position: 95% 15px;
+  }
+}
+[dir="rtl"] #notes:empty {
+  background-position: 95% 15px;
+}
+.rtl {
+  direction: rtl;
+}
+.form-action {
+  position: relative;
+  height: 40px;
+  &:dir(rtl) {
+    .button--remove {
+      position: absolute;
+      left: 0;
+    }
+  }
+  &:dir(ltr) {
+    .button--remove {
+      position: absolute;
+      right: 0;
+    }
+  }
+}

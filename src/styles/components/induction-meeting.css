@@ -1,0 +1,48 @@
+.induction-meeting {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+
+  textarea#notes {
+    padding-inline-start: 40px;
+    padding-top: 22px;
+
+    &:dir(rtl) {
+      padding-top: 12px;
+    }
+  }
+
+  #file {
+    margin-bottom: 15px;
+
+    &::before {
+      content: '+ Add File';
+
+      &:dir(rtl) {
+        content: '+ أضف ملف';
+      }
+    }
+  }
+
+  .attendees-label {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .evidence-attach {
+    margin-bottom: 10px;
+  }
+
+  .file-item button {
+    margin-inline-start: 15px;
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+
+    &:dir(rtl) {
+      position: relative;
+      top: initial;
+      bottom: 3px;
+    }
+  }
+}

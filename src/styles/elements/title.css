@@ -1,0 +1,9 @@
+.title {
+  font-family: 'Elektra';
+  font-weight: 400;
+  &:dir(rtl) {
+    font-family: 'FrutigerArabic';
+    font-weight: 600;
+  }
+}
+

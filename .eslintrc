@@ -1,0 +1,76 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "import",
+    "jsx-a11y",
+    "prettier"
+  ],
+  "extends": [
+    "airbnb-base",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "no-debugger": "off",
+    "max-len": [
+      "error",
+      180,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "class-methods-use-this": [
+      "error",
+      {
+        "exceptMethods": [
+          "render",
+          "getInitialState",
+          "getDefaultProps",
+          "componentWillMount",
+          "componentDidMount",
+          "componentWillReceiveProps",
+          "shouldComponentUpdate",
+          "componentWillUpdate",
+          "componentDidUpdate",
+          "componentWillUnmount"
+        ]
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "printWidth": 80
+      }
+    ],
+    "arrow-body-style": "off",
+    "global-require": "off",
+    "no-underscore-dangle": "off",
+    "no-nested-ternary": "off",
+    "react/display-name": [
+      "off",
+      {
+        "ignoreTranspilerName": false
+      }
+    ]
+  },
+  "settings": {
+    "import/core-modules": [
+      "react"
+    ]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true
+  }
+}

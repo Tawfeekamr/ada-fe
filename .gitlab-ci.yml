@@ -1,0 +1,28 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+variables:
+  KEY_PATH: /cloud.key
+
+before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - eval $(ssh-agent -s)
+  - echo "$USER_PASS" | tr -d '\r' | ssh-add - > /dev/null
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+
+deploy_stage:
+  stage: deploy
+  environment: Staging
+  only:
+    - master
+  script:
+    - rm ./package-lock.json
+    - npm install
+    - npm run build
+    - cd build/
+    - ls
+    - scp -o stricthostkeychecking=no -r . forge@95.177.211.187://home/forge/default/public

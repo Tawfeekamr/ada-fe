@@ -1,0 +1,44 @@
+.pillars-controllers {
+  display: flex;
+  padding: 0;
+  justify-content: space-around;
+  position: relative;
+  font-weight: 400;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-inline: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #E6E7E8;
+    top: 17px;
+    border-radius: 10px;
+  }
+  li {
+    cursor: pointer;
+    display: block;
+    color: var(--dark-green);
+    text-align: center;
+    font-size: 16px;
+    &::before {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin-inline: auto;
+      background: var(--dark-green);
+      border-radius: 50%;
+      margin-bottom: 5px;
+    }
+    &.active {
+      color: var(--primary-color);
+      &::before {
+        background: var(--primary-color) url(/assets/images/arrow.svg) 50% 50% no-repeat;
+        &:dir(rtl) {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

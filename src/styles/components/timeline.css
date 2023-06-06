@@ -1,0 +1,129 @@
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  clear: both;
+  &:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 50%;
+    margin-top: -4px;
+    transform: translate(0, -50%);
+    height: 8px;
+    border-radius: 12px;
+    background-color: #e6e7e8;
+  }
+  &__circle {
+    width: 40px;
+    height: 40px;
+    background-color: var(--dark-green);
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    display: block;
+    &:after {
+      content: "";
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      display: inline-block;
+    }
+  }
+  &__chart {
+    position: relative;
+    width: 220px;
+    span {
+      position: absolute;
+      background: #fff;
+      top: 35px;
+      left: 85px;
+      border-radius: 50%;
+      width: 50px;
+      padding: 0;
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+  &__item {
+    z-index: 1;
+    color: var(--dark-green);
+    text-align: center;
+    position: relative;
+    span {
+      font-size: 13px;
+    }
+    a {
+      display: block;
+      margin-bottom: -20px;
+      font-size: 14px;
+    }
+    &.current .timeline__circle:after {
+      background: url("/assets/images/next-timeline.png") no-repeat;
+      background-size: 10px 14px;
+      &:dir(rtl) {
+        transform: rotate(180deg);
+      }
+    }
+    &.idle {
+      .timeline__circle {
+        width: 58px;
+        height: 58px;
+        background: #fff;
+        border: solid 4px #e6e7e8;
+        text-align: center;
+        span {
+          color: #bcbec0;
+          line-height: 50px;
+          font-size: 15px;
+        }
+      }
+      span {
+        color: #bcbec0;
+        line-height: 1.2;
+        font-size: 14px;
+        display: inline-block;
+      }
+    }
+    &.done .timeline__circle:after {
+      background: url("/assets/images/checked-timeline.png") no-repeat;
+      background-size: 15px 11px;
+    }
+  }
+  &__circle-wrapper {
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  .timeline__item.current,
+  .timeline__item.done {
+    color: var(--primary-color);
+    .timeline__circle {
+      text-align: center;
+      background-color: var(--primary-color);
+      &:after {
+        background-position: center;
+      }
+    }
+  }
+
+  &__induction-meeting {
+    position: absolute;
+    width: 120%;
+    inset-inline-start: 50%;
+    bottom: -35px;
+    transform: translateX(50%);
+
+    &.not-held {
+      bottom: initial;
+      margin-top: 24px;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

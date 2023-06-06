@@ -1,0 +1,33 @@
+.reports {
+  fieldset {
+    margin-bottom: 15px;
+  }
+
+  .form-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .form-title {
+    font-weight: 400;
+  }
+
+  .form-item {
+    margin: 0;
+
+    label {
+      font-size: 18px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    & + .form-item {
+      margin-top: 20px;
+    }
+  }
+
+  &__button-wrapper {
+    text-align: center;
+  }
+}

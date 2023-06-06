@@ -1,0 +1,57 @@
+.skip-modal {
+  .title {
+    font-size: 20px;
+    text-align: center;
+    color: var(--primary-color);
+  }
+  label {
+    font-size: 14px;
+    line-height: 2;
+  }
+  &__buttons {
+    text-align: center;
+  }
+  .button {
+    padding: 8px 28px;
+  }
+  .close {
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    border: none;
+    position: absolute;
+    top: 10px;
+    inset-inline-end: 20px;
+    background-color: #fff;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 2px;
+      background-color: #cac9c9;
+      transform: rotate(45deg);
+      position: absolute;
+
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 2px;
+      background-color: #cac9c9;
+      transform: rotate(-45deg);
+      position: absolute;
+    }
+  }
+}
+.ReactModal__Overlay {
+
+  z-index: 2;
+}
+.ReactModal__Content {
+
+  border: none !important;
+  box-shadow: 0px 0px 4px -1px #808080;
+
+}

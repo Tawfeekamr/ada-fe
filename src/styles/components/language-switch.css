@@ -1,0 +1,16 @@
+.switch-language {
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  font-family: 'FrutigerArabic';
+  color: var(--primary-color);
+  background-color: transparent;
+  &:dir(rtl) {
+    font-family: 'Etelka', sans-serif;
+  }
+  &:focus {
+    outline: none;
+    text-shadow: 0px 2px 1px #c1c1c1;
+
+  }
+}

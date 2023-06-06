@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: 'Etelka', 'FrutigerArabic', sans-serif;
+  font-weight: 200;
+  &:dir(rtl) {
+    font-family: 'FrutigerArabic', 'Etelka', sans-serif;
+  }
+}
+.App > div:not(.splash), .App > section {
+  background: url('/assets/images/global-bg.jpg') no-repeat 0% 100%;
+  min-height: calc(100vh - 104px);
+}
+/* .pace .pace-progress {
+  height: 0;
+  display: none;
+}*/

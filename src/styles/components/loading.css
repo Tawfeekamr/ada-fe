@@ -1,0 +1,8 @@
+.loading {
+
+  height: calc(100vh - 100px);
+  text-align: center;
+  > div {
+   padding-top: 30vh;
+  }
+}

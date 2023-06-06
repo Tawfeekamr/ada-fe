@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+
+<style>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(255,255,255,0.75); /* white w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 5% from the top and centered */
+  padding-top: 20px;
+  padding-bottom: 35px;
+  padding-right: 35px;
+  padding-left: 35px;
+  border: none;
+  box-shadow: 0 0 9px -1px grey;
+  border-radius: 4px;
+  width: 80%; 
+}
+
+/* The Close Button */
+.close {
+  color: #00b288; 
+  font-family: inherit;
+  float: left;
+  font-size: -webkit-xxx-large;
+  cursor: pointer;
+}
+</style>
+
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Adaa</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+
+    
+<!-- Trigger/Open The Privacy Policy Modal -->
+<button 
+id="myBtn"
+style="
+    border: white;
+    color: #b3b3b3;
+    background-color: white;
+    float: left;
+    padding: 5px;
+    margin: 3px;
+" >
+سياسة  الاستخدام و الخصوصية
+</button>
+
+<!-- The Privacy Policy Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <h1>سياسة الاستخدام والخصوصية  </h1>
+    <h2>
+      سياسة الاستخدام
+    </h2> 
+    <p>
+
+      يوفر المركز الوطني لقياس أداء الأجهزة العامة "مركز أداء" في موقعه الإلكتروني معلومات عن مجال عمل مركز أداء، ويعد استخدام هذا الموقع موافقة ضمنية على شروط الاستخدام الخاصة بهذا الموقع الإلكتروني وشروط استخدام المعلومات، علمًا بأن هذه الشروط والأحكام قد تخضع للتغيير أو التعديل في أي وقت دون الالتزام بإشعار مسبق، كما يخضع هذا الموقع للأنظمة القضائية بالمملكة العربية السعودية فيما يتعلق بجميع المطالبات والخلافات التي تنشأ عن استخدام الموقع الإلكتروني لمركز أداء.
+    </p>
+    <h3>
+      حقوق النشر والملكية الفكرية
+    </h3>
+    <p>
+      إن حقوق الطبع والنشر والمعلومات والمواد المتوفرة والموجودة على موقع المركز الوطني لقياس أداء الأجهزة العامة هي أصول تعود ملكيتها للمركز. ويمنع منعاً باتاً نسخها أو نشرها أو استخدامها بطريقة تخالف ما نشرت لأجله أو استغلالها لأهداف ومصالح شخصية دون إذن خطي مسبق من المركز. علمًا أنه في حالات الاستخدام النظامي يجب الإشارة إلى المركز الوطني لقياس أداء الأجهزة العامة كمصدر لتلك المعلومات.
+    </p>
+    <h3>
+      إتاحة وتوفر المعلومات في الموقع
+    </h3>
+    <p>
+      يعمل مركز أداء على أن تكون المعلومات متوفرة ومتاحة للمستخدم على مدار الساعة، ويكون المركز غير مسؤول عن عدم توفر المعلومات نتيجة لأسباب فنية أو تقنية أو غيرها. كما يمكن لمركز أداء تعليق الوصول إلى هذا الموقع بشكل مؤقت أو دائم دون الالتزام بإشعار مسبق.
+    </p>
+    <h3>
+      الدقة والضمانات
+    </h3>
+    <p>
+      يبذل مركز أداء جهدًا في التأكد من وفرة وشمولية المعلومات داخل الموقع، ولا يتحمل المركز أي مسؤولية عن أي خسائر أو أضرار تنتج عن أي استخدام لهذا الموقع أو محتواه.
+    </p>
+
+    <h2>الخصوصية </h2>
+    <p>
+      يتيح المركز الوطني لقياس أداء الأجهزة العامة لجميع الزوار إمكانية الوصول إلى صفحات موقعه الإلكتروني (ma. adaa.gov.sa)، حيث يتعهد المركز بحماية خصوصية بياناتك الشخصية وأنه لن يقوم بجمع أي معلومات شخصية عنك إلا إذا اخترت طواعية توفير وتقديم هذه المعلومات لنا عبر قنوات التواصل الموضحة في هذا الموقع، حيث لا يتم استغلال أو استخدام هذه المعلومات لغرض آخر (غير شرعي) خارج إطار إنجاز ومعالجة طلبك متى ما كانت خدمة الغرض متاحة. كما نود إفادتك بأنه، خلال تصفحك هذا الموقع تقوم أنظمة الاستضافة تلقائياً بتسجيل معلومات الزائرين المتعلقة بعمليات التصفّح (معلومات لا تكشف هويتك الشخصية) مثل الصفحات التي تتم قراءتها، أو المحتوى الذي يتم مشاهدته، أو المواد التي تم تنزيلها، وذلك لأغراض دراسية وإحصائية تساعدنا في تقييم مستوى المحتوى وطريقة العرض وتوفير معلومات عن مشاكل أداء النظام لتحسين أداء هذا الموقع بشكل عام.
+    </p>
+    <h3>حماية الموقع </h3>
+    <p>
+      بهدف تحقيق معايير الأمان في هذا الموقع، ولضمان حماية المعلومات والخدمات المقدمة وإتاحتها لكافة الزوار، يقوم المركز الوطني لقياس أداء الأجهزة العامة بمراقبة حركة مرور البيانات من وإلى الموقع لحماية هذا الموقع وكشف محاولات الوصول غير المصرح بها، أو محاولات تغيير المحتويات، أو تعطيله. كما يمنع منعاً باتاً إجراء محاولات الوصول غير المصرح بها إلى هذا الموقع، أو أي من أنظمته، أو محاولات تغيير محتوياته، أو تعطيل الوصول إليه، أو محاولات إلحاق الضرر بالموقع بأي شكل من الأشكال. يحق للمركز اتخاذ التدابير التي يراها ملائمة لحماية المعلومات أو ضد إساءة الاستخدام لهذا الموقع، ويحتفظ المركز بحقه القانوني في ملاحقة المتسببين في ذلك بموجب قانون (نظام مكافحة جرائم المعلوماتية) واللوائح والتشريعات القانونية المعتمدة في المملكة العربية السعودية.
+    <p>
+      <h3>حقوق الملكية</h3>
+    <p>
+      إن حقوق الطبع والنشر والمعلومات والمواد المتوفرة والموجودة على موقع المركز الوطني لقياس أداء الأجهزة العامة هي أصول تعود ملكيتها للمركز. يمنع منعاً باتاً نسخها أو نشرها أو استخدامها بطريقة تخالف ما نشرت لأجله أو أن تستغل لأهداف ومصالح شخصية دون إذن خطي مسبق من المركز. لذا في أي من حالات الاستخدام النظامي؛ يجب الإشارة إلى المركز الوطني لقياس أداء الأجهزة العامة كمصدر لتلك المعلومات.
+    </p>
+
+    <h3>روابط المواقع الخارجية </h3>
+    <p>
+      يتم توفير روابط لمواقع إلكترونية خارجية تديرها جهات أخرى. يهدف المركز من خلالها إلى مساعدة الزائر للوصول إلى بعض المواقع التي قد توفر بعض الخدمات والمعلومات التي يحتاجها، دون أدنى مسؤولية عن سياسة الخصوصية والسرية المعتمدة فيها أو أدائها أو تأثيرها بشكل عام. كما ننصح الزائر بالاطلاع على سياسة الخصوصية والسرية لأي من هذه المواقع
+    </p>.
+
+    <h3>
+      حماية المعلومات الشخصية
+    </h3>
+    <p>
+      يلتزم المركز الوطني لقياس أداء الأجهزة العامة بعدم الإفصاح عن معلومات الزائر الشخصية التي يقدمها طواعية من دون موافقته الشخصية إلا في حالات معيّنة يتطلب فيها القانون الإفصاح عن هذه المعلومات. كما قد يتم تقاسم البيانات الضرورية لإتمام معالجة طلب الزائر مع الجهات أو الإدارات الداخلية في المركز، وذلك لخدمته بصورة أكثر فعالية. ولضمان مساعدة الزائر في حماية معلوماته الشخصية فإننا نوصي بالآتي:
+    </p>
+    <ul>
+      <li>التواصل مع المركز بشكل فوري عندما تظن أن شخصاً ما استطاع الوصول إلى معلوماتك الشخصية، أو أي معلومات سرية قد قدمتها أو حصلت عليها من قبل المركز.</li>
+      <li>لا تفصح مطلقاً عن أي معلومات سرية عبر الهاتف أو شبكة الإنترنت ما لم تتأكد من هوية الشخص أو الطرف المستقبل للمعلومة وأن تكون هناك اتفاقية مسبقة تحدد قنوات التواصل. </li>
+      <li>استخدم متصفح آمن عند قيامك بإنجاز المعاملات عبر الإنترنت مع إغلاق التطبيقات غير المستخدمة، وتأكد من أن برنامج الحماية من الفيروسات فعّال ومحدث على الدوام.</li>
+      <li>للحفاظ على بياناتك الشخصية، يقوم المركز باتباع سياسة أمنية شاملة وصارمة، كما تخضع الخوادم التي تستضيف هذا الموقع لأعلى درجات الحماية، ويتم تخزين ومعالجة ومشاركة البيانات الشخصية باستخدام التقنيات الأمنية المناسبة. </li>
+      <li>في حالة وجود أية استفسارات أو آراء حول سياسة الخصوصية والسرية، يمكن التواصل مع إدارة الموقع من خلال قنوات الاتصال الموضحة في صفحة اتصل بنا. </li>
+      </ul>
+    </div>
+  </div>
+      <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+          modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+          modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
+
+      <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+</html>

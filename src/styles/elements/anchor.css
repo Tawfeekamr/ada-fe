@@ -1,0 +1,6 @@
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 200;
+  font-family: 'Etelka', 'FrutigerArabic', sans-serif;
+}

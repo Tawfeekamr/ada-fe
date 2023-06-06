@@ -1,0 +1,9 @@
+.bold {
+  font-family: 'Etelka';
+  font-weight: 400;
+  &:dir(rtl) {
+    font-family: 'FrutigerArabic';
+    font-weight: 600;
+  }
+}
+

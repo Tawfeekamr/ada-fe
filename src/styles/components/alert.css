@@ -1,0 +1,31 @@
+body {
+  .react-confirm-alert-body {
+    width: 450px;
+    &:dir(rtl) {
+      text-align: right;
+      font-family: 'FrutigerArabic', sans-serif;
+    }
+  }
+  .react-confirm-alert-button-group > button {
+    background: var(--primary-color);
+    padding: 10px 25px;
+    color: #ffff;
+    margin-inline: 5px;
+    font-size: 14px;
+  }
+  .react-confirm-alert-button-group {
+    justify-content: center;
+    &:dir(rtl) {
+      button {
+        font-family: 'FrutigerArabic', sans-serif;
+      }
+    }
+  }
+  .redux-toastr .top-center {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .redux-toastr .toastr .close-toastr {
+    height: 30px;
+  }
+}

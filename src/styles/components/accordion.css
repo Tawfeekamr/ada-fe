@@ -1,0 +1,117 @@
+.accordion-header {
+  &__content {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 400;
+  }
+  &__status {
+    margin: 0;
+    font-size: 14px;
+    text-decoration-line: underline;
+    position: relative;
+
+    &.delayed {
+      &::before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        inset-inline-start: -40px;
+        background-image: url(/assets/images/flag.svg);
+      }
+    }
+  }
+  &__action a {
+    font-size: 14px;
+    font-family: "Frutiger", sans-serif;
+    text-decoration-line: underline;
+    color: inherit;
+    font-weight: 200;
+  }
+}
+.accordion {
+  &__header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    color: #fff;
+    margin: 3px 0;
+    position: relative;
+    border-top: 1px solid #eee;
+    &.shrink {
+      background-color: #fff;
+      color: var(--primary-color);
+      box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.19);
+      .accordion-header__status {
+        position: absolute;
+        inset-inline-end: 100px;
+        top: 13px;
+        text-decoration: none;
+      }
+      .accordion-header__title {
+        font-weight: 400;
+      }
+      .accordion-header__extension {
+        display: none;
+      }
+    }
+    .accordion-header__extension {
+      button {
+        color: #fff;
+        background-color: transparent;
+        border: 0;
+        text-decoration: underline;
+        font-family: inherit;
+        cursor: pointer;
+      }
+    }
+  }
+  &__content {
+    max-height: none;
+    visibility: visible;
+    opacity: 1;
+    padding: 0 50px 70px;
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.19);
+    background-color: #fff;
+
+    &.shrink {
+      opacity: 0;
+      transition: all 3s ease-in;
+    }
+  }
+  &__button {
+    background: none;
+    border-radius: 50%;
+    border: solid 1px #fff;
+    height: 23px;
+    width: 23px;
+    text-align: center;
+    margin-inline-start: 19px;
+    &.shrink {
+      background-color: var(--primary-color);
+      img {
+        transform: rotate(90deg);
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+    img {
+      transform: rotate(-90deg);
+      width: 7px;
+    }
+  }
+}
+
+.remove-from-campaign {
+  margin-block: 50px 20px;
+  float: inline-end;
+}

@@ -1,0 +1,14 @@
+.landing-title {
+  color: var(--primary-color);
+}
+.static-alert {
+  color: darkred;
+}
+.landing {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  dt {
+    float: right;
+    min-width: 14%;
+  }
+}

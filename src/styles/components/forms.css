@@ -1,0 +1,120 @@
+.form-container {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  max-width: 80%;
+  min-width: 600px;
+  margin: 0 auto;
+  &.campaign-form {
+    max-width: 95%;
+
+  }
+}
+.form-title {
+  text-align: center;
+  color: var(--dark-gray);
+  font-size: 30px;
+  font-weight: bold;
+  margin-block: 50px;
+}
+.form-item {
+  margin-block: 20px;
+}
+.form-wrapper {
+  padding: 53px 75px;
+  box-shadow: var(--box-shadow);
+}
+.buttons--wrapper {
+  text-align: center;
+}
+.form-section {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding-block: 30px;
+  margin-block: 20px;
+}
+.form-section + .form-section {
+  border-top: none;
+}
+.form-section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+.entity-form {
+  width: 90%;
+  margin: 0 auto;
+  .form-title {
+    margin-top: 0;
+  }
+  &.edit-entity .form-section {
+    border-bottom: none;
+  }
+}
+.entity-form .form-item p:not(.form-error) {
+  display: none;
+}
+.form-error {
+  margin: 0;
+  color: var(--error);
+  font-size: 14px;
+  text-align: start;
+}
+.form-label {
+  color: var(--dark-color);
+}
+.inline-radio {
+  display: inline-block;
+  white-space: nowrap;
+  input {
+    margin: 0;
+    vertical-align: text-top;
+  }
+  .form-item {
+    margin: 0;
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  label {
+    display: inline-block;
+    margin-inline-start: 5px;
+    vertical-align: middle;
+  }
+
+  & + .inline-radio {
+    margin-inline-start: 25px;
+  }
+}
+.form-section-subtitle {
+  font-weight: 400;
+  color: var(--dark-color);
+  margin-top: 10px;
+}
+
+input, select, textarea {
+  font-size: 14px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  &__input {
+    flex-basis: 60%;
+  }
+  &__postfix {
+    white-space: nowrap;
+    padding-inline-start: 15px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+fieldset {
+  border: 0;
+  &.has-border {
+    border: 1px solid #979797;
+  }
+}
+input[type="text"]:disabled, input[type="number"]:disabled, textarea:disabled {
+  background: #f9f9f9;
+}

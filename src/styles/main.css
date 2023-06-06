@@ -1,0 +1,65 @@
+/* Importing Settings */
+@import "settings/fonts.css";
+@import "settings/variables.css";
+
+/*Importing vendors styles*/
+@import "../../node_modules/react-datepicker/dist/react-datepicker.css";
+@import "../../node_modules/react-tabs/style/react-tabs.css";
+@import "../../node_modules/react-table/react-table.css";
+
+/* Importing Elements */
+@import "elements/anchor.css";
+@import "elements/body.css";
+@import "elements/img.css";
+@import "elements/title.css";
+
+/* Importing general components */
+@import "general/box-sizing.css";
+@import "general/shadow.css";
+@import "general/container.css";
+@import "general/rtl.css";
+@import "general/bold.css";
+@import "general/message.css";
+
+/* Importing Objects */
+@import "objects/grid.css";
+@import "objects/flex-grid.css";
+@import "objects/forms/index.css";
+@import "objects/section.css";
+
+/* Importing Components */
+@import "components/skip-modal.css";
+@import "components/invite.css";
+@import "components/fields.css";
+@import "components/forms.css";
+@import "components/buttons.css";
+@import "components/header.css";
+@import "components/splash.css";
+@import "components/checkbox.css";
+@import "components/timeline.css";
+@import "components/table.css";
+@import "components/language-switch.css";
+@import "components/assessment/index.css";
+@import "components/loading.css";
+@import "components/new-campaign.css";
+@import "components/accordion.css";
+@import "components/invite.css";
+@import "components/alert.css";
+@import "components/assessment.css";
+@import "components/evidence.css";
+@import "components/landing.css";
+@import "components/assign.css";
+@import "components/language-switch.css";
+@import "components/date-picker.css";
+@import "components/active-assessment.css";
+@import "components/induction-meeting.css";
+@import "components/extend-self-assessment-modal.css";
+@import "components/induction-meeting-modal.css";
+@import "components/dashboard.css";
+@import "components/reports.css";
+
+/* Importing Utilities */
+@import "utilities/clearfix.css";
+@import "utilities/lists.css";
+@import "utilities/screen-reader.css";
+@import "utilities/text-alignment.css";

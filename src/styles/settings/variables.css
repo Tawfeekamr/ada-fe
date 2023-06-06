@@ -1,0 +1,17 @@
+:root {
+
+  /* Colors */
+  --primary-color: #00B288;
+  --border: #979797;
+  --light-gray: #b2b4b6;
+  --dark-color: #6D6E71;
+  --dark-gray: #414042;
+  /* Dimensions that affect the layout */
+  --gutter: 15px;
+  --box-shadow: 0px 0px 18px 3px rgba(151,151,151,0.3);
+  --error: #ec0b0b;
+  --dark-green: #00665E;
+
+  /* Fonts */
+  /* --font-stack: "Lato", sans-serif; */
+}

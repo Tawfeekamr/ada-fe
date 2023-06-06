@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Etelka';
+  font-display: fallback;
+  src: url('../../fonts/EtelkaLightPro.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Elektra';
+  font-display: fallback;
+  src: url('../../fonts/ElektraLightProRegular.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ElektraLight';
+  font-display: fallback;
+  src: url('../../fonts/ElektraLightProRegular.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Elektra';
+  font-display: fallback;
+  src: url('../../fonts/ElektraMediumProRegular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Etelka';
+  font-display: fallback;
+  src: url('../../fonts/EtelkaMediumPro.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Frutiger';
+  font-display: fallback;
+  src: url('../../fonts/FrutigerLTStd-Bold.eot');
+  src: url('../../fonts/FrutigerLTStd-Bold.woff2') format('woff2'),
+       url('../../fonts/FrutigerLTStd-Bold.woff') format('woff'),
+       url('../../fonts/FrutigerLTStd-Bold.ttf') format('truetype'),
+       url('../../fonts/FrutigerLTStd-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Frutiger';
+  font-display: fallback;
+  font-family: 'FrutigerLTStd-Light';
+  src: url('../../fonts/FrutigerLTStd-Light.eot');
+  src: url('../../fonts/FrutigerLTStd-Light.woff2') format('woff2'),
+       url('../../fonts/FrutigerLTStd-Light.woff') format('woff'),
+       url('../../fonts/FrutigerLTStd-Light.ttf') format('truetype'),
+       url('../../fonts/FrutigerLTStd-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FrutigerArabic';
+  src: url('../../fonts/FrutigerLTArabic-65Bold.eot');
+  src: url('../../fonts/FrutigerLTArabic-65Bold.woff2') format('woff2'),
+       url('../../fonts/FrutigerLTArabic-65Bold.woff') format('woff'),
+       url('../../fonts/FrutigerLTArabic-65Bold.ttf') format('truetype'),
+       url('../../fonts/FrutigerLTArabic-65Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FrutigerArabic';
+  font-display: fallback;
+  src: url('../../fonts/FrutigerLTArabic-45Light.eot');
+  src: url('../../fonts/FrutigerLTArabic-45Light.woff2') format('woff2'),
+       url('../../fonts/FrutigerLTArabic-45Light.woff') format('woff'),
+       url('../../fonts/FrutigerLTArabic-45Light.ttf') format('truetype'),
+       url('../../fonts/FrutigerLTArabic-45Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  font-style: normal;
+
+
+}

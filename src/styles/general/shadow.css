@@ -1,0 +1,7 @@
+.shadow {
+  /* box-shadow: 7px 7px 18px 4px rgba(0,0,0,0.12); */
+  box-shadow: 6px 7px 18px 4px hsl(0, 2%, 91%);
+}
+.shadow-bottom {
+  box-shadow: 0 4px 33px 0 rgba(0,0,0,0.22);
+}

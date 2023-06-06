@@ -1,0 +1,19 @@
+.react-datepicker__navigation--previous {
+  &:dir(rtl) {
+    left: auto;
+    right: 10px;
+    border-right-color: transparent;
+    border-left-color: #ccc;
+  }
+}
+.react-datepicker__navigation--next {
+  &:dir(rtl) {
+    right: auto;
+    left: 10px;
+    border-left-color: transparent;
+    border-right-color: #ccc;
+  }
+}
+.react-datepicker-popper {
+  z-index: 2;
+}

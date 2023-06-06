@@ -1,0 +1,63 @@
+.campaign-form {
+  .timeline::before {
+    top: 34%;
+  }
+  .form-wrapper {
+    margin: 58px 0;
+  }
+  .duration {
+    display: flex;
+    align-items: center;
+    > span {
+      padding-top: 30px;
+    }
+  }
+  .form-container {
+    padding-top: 0;
+  }
+  .timeline {
+    max-width: 800px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-section {
+    border-bottom: none;
+  }
+  .form-item {
+    margin-bottom: 5px;
+  }
+  .form-error + .form-item {
+    background: red;
+  }
+  .add {
+    display: block;
+    margin: 40px auto;
+
+    &::after {
+      content: none;
+    }
+  }
+  .global-error {
+    color: red;
+    margin: 10px 50px;
+  }
+  .duration-input {
+    .form-error {
+      position: absolute;
+    }
+  }
+
+  fieldset:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+
+    .Select-control {
+      cursor: not-allowed;
+      background-color: #f9f9f9;
+    }
+  }
+}
+.skipped {
+  color: var(--border);
+}

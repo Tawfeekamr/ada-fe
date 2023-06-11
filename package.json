@@ -86,7 +86,7 @@
     "react-styleguidist": "^7.0.16"
   },
   "overrides": {
-    "graceful-fs": "^4.2.11"
+    "graceful-fs": "^4.2.2"
   },
   "main": "index.js",
   "repository": "git@gitlab.com:robustastudio-frontend/adaa.git",

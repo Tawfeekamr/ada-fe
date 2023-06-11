@@ -123,6 +123,34 @@ section header {
     float: inline-end;
     text-align: end;
   }
+  .list-table {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+  }
+  .list-table li {
+    margin: 0 10px;
+  }
+  .list-table input[type="search"] {
+    font-family: 'Etelka', 'FrutigerArabic', sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    padding: 4px;
+    height: 35px;
+    color: #aaa;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+  }
+  ::placeholder { 
+    color: #aaa;
+  }
+  .list-table .form-item {
+    width: 120px;
+    margin: 0;
+    text-align: right;
+  }
+  .list-table .form-item .Select {
+  }
   .section-actions {
     float: inline-end;
   }

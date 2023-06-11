@@ -15,6 +15,7 @@ export * from "./actions_deleteEntity";
 export * from "./actions_getTrainings";
 export * from "./actions_getAssessments";
 export * from "./actions_users";
+export * from "./actions_users_filter";
 export * from "./actions_campaigns";
 export * from "./actions_getCampaign";
 export * from "./actions_generateSelfReport";

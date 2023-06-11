@@ -4,6 +4,8 @@ import jwtDecode from "jwt-decode";
 let BASE_URL;
 if (process.env.REACT_APP_ENV === "production") {
   BASE_URL = process.env.REACT_APP_PRODUCTION_URL;
+} else if (process.env.REACT_APP_ENV === "development") {
+  BASE_URL = process.env.REACT_APP_DEV_URL;
 } else {
   BASE_URL = process.env.REACT_APP_STAGING_URL;
 }
@@ -104,6 +106,10 @@ export default class Api {
     sessionStorage.setItem("email", data.email);
     sessionStorage.setItem("password", data.password);
     return Api.getOTPStatus("/auth/login", data);
+  }
+
+  static getFilterdData(path, data) {
+    return axiosInstance.get(path, data);
   }
 
   static loginData(data) {

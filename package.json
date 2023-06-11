@@ -5,8 +5,10 @@
   "proxy": "https://adaa.wisys.com.sa:3000/api/v1",
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"gulp watch\"",
+    "dev": "REACT_APP_ENV=development concurrently \"react-scripts start\" \"gulp watch\"",
     "build": "gulp && react-scripts build",
     "build:staging": "REACT_APP_ENV=staging npm run build",
+    "build:dev": "REACT_APP_ENV=development npm run build",
     "build:production": "REACT_APP_ENV=production npm run build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
@@ -18,10 +20,12 @@
   },
   "dependencies": {
     "axios": "^0.18.1",
+    "bootstrap": "^5.3.0",
     "chart.js": "^2.7.2",
     "core-js": "^2.5.7",
     "eslint-config-airbnb-base": "^12.1.0",
     "formik": "^0.11.11",
+    "gulp-cli": "^2.3.0",
     "gulp-stylelint": "^7.0.0",
     "http-proxy-middleware": "^2.0.6",
     "js-cookie": "^2.2.0",
@@ -51,6 +55,7 @@
     "redux-cookie": "^0.5.9",
     "redux-form": "^7.3.0",
     "redux-promise-middleware": "^5.1.1",
+    "styled-components": "^6.0.0-rc.3",
     "urijs": "^1.19.1",
     "yup": "^0.26.3"
   },
@@ -58,7 +63,7 @@
     "autoprefixer": "^8.6.5",
     "concurrently": "^3.6.0",
     "css-loader": "^3.4.2",
-    "cssnano": "^4.0.0",
+    "cssnano": "^4.1.11",
     "cssnano-loader": "^0.1.2",
     "firebase": "^5.5.9",
     "firebase-tools": "^6.1.1",
@@ -80,14 +85,15 @@
     "prop-types": "^15.6.1",
     "react-styleguidist": "^7.0.16"
   },
+  "overrides": {
+    "graceful-fs": "^4.2.11"
+  },
   "main": "index.js",
   "repository": "git@gitlab.com:robustastudio-frontend/adaa.git",
   "author": "mayar.elmohr@robustastudio.com",
   "license": "MIT",
   "browserslist": [
     ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
+    "not ie <= 11"
   ]
 }

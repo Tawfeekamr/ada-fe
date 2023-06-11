@@ -11,7 +11,7 @@ body {
 }
 .App > div:not(.splash), .App > section {
   background: url('/assets/images/global-bg.jpg') no-repeat 0% 100%;
-  min-height: calc(100vh - 104px);
+  /* min-height: calc(100vh - 104px); */
 }
 /* .pace .pace-progress {
   height: 0;

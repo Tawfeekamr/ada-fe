@@ -1,20 +1,20 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { Formik, Field, Form } from 'formik';
-import PropTypes from 'prop-types';
-import * as Yup from 'yup';
-import { toastr } from 'react-redux-toastr';
-import { MySelect, MyInputField, MyTextarea } from '../../components';
-import { strings, translateString, Navigation } from '../../utilities';
-import { inviteUser, getEntitiesNoAdvisor, getRoles } from '../../actions';
+import React from "react";
+import { connect } from "react-redux";
+import { Formik, Field, Form } from "formik";
+import PropTypes from "prop-types";
+import * as Yup from "yup";
+import { toastr } from "react-redux-toastr";
+import { MySelect, MyInputField, MyTextarea } from "../../components";
+import { strings, translateString, Navigation } from "../../utilities";
+import { inviteUser, getEntitiesNoAdvisor, getRoles } from "../../actions";
 import {
   ADMIN,
   MASTER_ASSESSOR,
   ENTITY_COORDINATOR,
   ASSESSOR,
   ENTITY_ADVISOR,
-  ENTITY_USER,
-} from '../../utilities/roles';
+  ENTITY_USER
+} from "../../utilities/roles";
 
 /**
  * Invite new users to system, viewed by Admin, EC and MA
@@ -41,7 +41,7 @@ class Invite extends React.PureComponent {
       case ENTITY_COORDINATOR:
         return ENTITY_USER;
       default:
-        return '';
+        return "";
     }
   };
 
@@ -59,13 +59,13 @@ class Invite extends React.PureComponent {
           </legend>
           <Formik
             initialValues={{
-              first_name: '',
-              last_name: '',
-              email: '',
+              first_name: "",
+              last_name: "",
+              email: "",
               entities: [],
               role_id: this.getInitialRoleValue(role),
-              notes: '',
-              expertise_segment: '',
+              notes: "",
+              expertise_segment: ""
             }}
             validationSchema={Yup.lazy(values => {
               return Yup.object().shape({
@@ -95,7 +95,7 @@ class Invite extends React.PureComponent {
                     ? Yup.string().required(
                         translateString(strings.invite.errors.expertiseSegment)
                       )
-                    : Yup.string().notRequired(),
+                    : Yup.string().notRequired()
               });
             })}
             onSubmit={(values, { setSubmitting, setErrors }) => {
@@ -119,7 +119,7 @@ class Invite extends React.PureComponent {
                 .then(() => {
                   setSubmitting(false);
                   toastr.success(translateString(strings.message.user));
-                  this.props.history.push('/users');
+                  this.props.history.push("/users");
                 })
                 .catch(() => {
                   setSubmitting(false);
@@ -140,7 +140,7 @@ class Invite extends React.PureComponent {
               setFieldValue,
               setFieldTouched,
               handleSubmit,
-              isSubmitting,
+              isSubmitting
             }) => (
               <Form
                 className="form-wrapper invite-form"
@@ -291,18 +291,15 @@ function mapStateToProps(state) {
     userCreated,
     entitiesNoAdvisorList,
     roles,
-    isLoading,
+    isLoading
   };
 }
 const mapDispatchToProps = {
   inviteUser,
   getEntitiesNoAdvisor,
-  getRoles,
+  getRoles
 };
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Invite);
+export default connect(mapStateToProps, mapDispatchToProps)(Invite);
 
 Invite.propTypes = {
   /** @ignore */
@@ -320,5 +317,5 @@ Invite.propTypes = {
   /** @ignore */
   userCreated: PropTypes.object,
   /** Current role of logged in user */
-  userRole: PropTypes.number.isRequired,
+  userRole: PropTypes.number.isRequired
 };

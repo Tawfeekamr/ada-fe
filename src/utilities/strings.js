@@ -687,6 +687,10 @@ const strings = {
       en: "Invite entity user",
       ar: "إضافة مستخدم جهاز جديد"
     },
+    searchUsers: {
+      en: "Search...",
+      ar: "البحث..."
+    },
     entity: {
       en: "Invite new entity",
       ar: "إضافة جهاز جديد"
@@ -718,6 +722,10 @@ const strings = {
     select: {
       en: "Select",
       ar: "اختر"
+    },
+    selectFilter: {
+      en: "Filter",
+      ar: "فلترة"
     },
     cancel: {
       en: "Cancel",
